@@ -56,9 +56,9 @@ const Home = () => {
                     rotateY,
                     transformStyle: "preserve-3d",
                 }}
-                className="relative w-full max-w-7xl mx-auto px-4 py-8"
+                className="relative w-full max-w-7xl mx-auto px-4 py-8 flex flex-col items-center justify-center md:block" // Centering for mobile
             >
-                <div className="relative shadow-2xl rounded-xl overflow-hidden transform-gpu">
+                <div className="relative shadow-2xl rounded-xl overflow-hidden transform-gpu w-full">
                     <motion.img
                         src="/assets/frame%201.jpg"
                         alt="Cover Page"
@@ -71,13 +71,13 @@ const Home = () => {
 
                     {/* Enter Button Layer */}
                     <motion.div
-                        className="absolute inset-0 pointer-events-none"
+                        className="absolute inset-0 pointer-events-none flex items-end justify-center md:block" // Flex center bottom for mobile
                         style={{ translateZ: "100px" }} // BUTTON FLOATS ABOVE IMAGE
                     >
                         <div className="w-full h-full relative">
                             <button
                                 onClick={() => navigate('/about')}
-                                className="pointer-events-auto absolute bottom-20 right-14 px-6 py-3 bg-black text-white font-semibold text-base rounded-full shadow-2xl hover:bg-white hover:text-black hover:scale-110 transition-all border-2 border-transparent hover:border-black flex items-center gap-2"
+                                className="pointer-events-auto mb-8 md:mb-0 md:absolute md:bottom-20 md:right-14 px-6 py-3 bg-black text-white font-semibold text-base rounded-full shadow-2xl hover:bg-white hover:text-black hover:scale-110 transition-all border-2 border-transparent hover:border-black flex items-center gap-2"
                             >
                                 Enter Portfolio <ChevronRight size={18} />
                             </button>

@@ -9,7 +9,7 @@ const Navigation = () => {
     if (location.pathname === '/') return null;
 
     return (
-        <div className="fixed top-6 right-6 z-50 flex gap-4">
+        <div className="fixed top-4 right-4 md:top-6 md:right-6 z-50 flex gap-3 md:gap-4">
             <button
                 onClick={() => navigate(-1)}
                 className="p-2 bg-black text-white rounded-full hover:bg-white hover:text-black transition-all border border-black shadow-lg"
